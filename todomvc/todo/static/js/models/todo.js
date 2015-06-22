@@ -23,8 +23,5 @@ var app = app || {};
 			});
 		},
 
-		url: function () {
-			return app.Todo.__super__.url.call(this) + "/";
-		}
 	});
 })();
