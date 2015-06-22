@@ -1,14 +1,5 @@
 # Created by https://www.gitignore.io
 
-### Django ###
-*.log
-*.pot
-*.pyc
-__pycache__/
-local_settings.py
-
-# Created by https://www.gitignore.io
-
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -68,4 +59,10 @@ docs/_build/
 # PyBuilder
 target/
 
+*.sqlite
 *.sqlite3
+.idea
+fixtures
+*.sql
+.direnv
+.envrc
