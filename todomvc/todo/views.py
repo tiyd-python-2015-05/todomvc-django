@@ -3,7 +3,7 @@ from .models import Todo
 from rest_framework import viewsets
 # from django.contrib.auth.models import User, Group
 # from tutorial.quickstart.serializers import UserSerializer, GroupSerializer
-from todomvc.todo.serializers import TodoSerializer
+from todo.serializers import TodoSerializer
 
 # class UserViewSet(viewsets.ModelViewSet):
 #     """
