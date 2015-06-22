@@ -17,6 +17,19 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic import TemplateView
 
+# project specific
+from django.contrib.auth.models import User
+from rest_framework import routers
+from todo.models import *
+from todo.views import *
+#from todo.serializer import *
+
+router = routers.DefaultRouter()
+router.register(r'todos', ItemViewSet)
+
 urlpatterns = [
+    url(r'^admin/', include(admin.site.urls)),
+
     url(r'^$', TemplateView.as_view(template_name="index.html")),
+    url(r'^api/', include(router.urls)),
 ]
