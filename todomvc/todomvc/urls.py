@@ -24,6 +24,6 @@ router.register(r'todo', views.TodoViewSet)
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name="index.html")),
-    url(r'^', include(router.urls)),
+    url(r'^api/', include(router.urls)),
 
 ]
