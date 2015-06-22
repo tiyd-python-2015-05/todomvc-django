@@ -16,7 +16,26 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic import TemplateView
+from rest_framework import routers, serializers, viewsets
+
+from todo.models import Todo
+
+
+class TodoSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Todo
+        fields = ('id', 'title', 'completed', 'order')
+
+
+class TodoViewSet(viewsets.ModelViewSet):
+    queryset = Todo.objects.all()
+    serializer_class = TodoSerializer
+
+router = routers.DefaultRouter()
+router.register(r'todo', TodoViewSet)
+
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name="index.html")),
+    url(r'^api/', include(router.urls)),
 ]
