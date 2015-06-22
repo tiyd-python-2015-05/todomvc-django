@@ -21,10 +21,7 @@ var app = app || {};
 			this.save({
 				completed: !this.get('completed')
 			});
-		},
 
-		url: function () {
-			return app.Todo.__super__.url.call(this) + "/";
 		}
 	});
 })();
