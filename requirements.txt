@@ -1,4 +1,5 @@
 Django==1.8.2
+<<<<<<< HEAD
 django-debug-toolbar==1.3.2
 django-extensions==1.5.5
 django-filter==0.10.0
@@ -9,4 +10,12 @@ Markdown==2.6.2
 Pygments==2.0.2
 six==1.9.0
 sqlparse==0.1.15
+=======
+django-bootstrap3==5.4.0
+django-debug-toolbar==1.3.0
+django-extensions==1.5.5
+fake-factory==0.5.1
+ipython==3.1.0
+psycopg2==2.6.1
+>>>>>>> b839ce38ab48ffdf2370fcf49dc1447fdbe90e4b
 Werkzeug==0.10.4
