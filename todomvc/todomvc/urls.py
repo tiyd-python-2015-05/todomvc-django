@@ -16,7 +16,17 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic import TemplateView
+from todo import views
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+router.register(r"^api/todos", views.TodoViewSet)
+from django.views.decorators.csrf import csrf_exempt
+
+
 
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name="index.html")),
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', csrf_exempt(TemplateView.as_view(template_name="index.html"))),
+    url(r'^', include(router.urls))
 ]

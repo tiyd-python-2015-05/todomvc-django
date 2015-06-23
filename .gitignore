@@ -69,3 +69,9 @@ docs/_build/
 target/
 
 *.sqlite3
+
+.envrc
+.envrc	
+.pyc
+.idea
+.direnv/
